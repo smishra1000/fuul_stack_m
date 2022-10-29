@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            JS fundamentals
+        </title>
+    </head>
+    <body>
+        <script>
+            //function
+            // function greet(){
+            //     console.log("hello")
+            // }
+            // function add(a,b,fn){
+            //     console.log(a+b);
+            //     fn();
+            // }
+
+            // add(2,3,greet);
+
+
+            //
+            // function parent(){
+            //     let age = 40;
+            //     return  function child(){
+            //         console.log(age);
+            //     }
+            // }
+            // console.log(parent()());
+
+            // clousre---
+
+            // function demoScope(){
+            //     var a = 30;
+            //     if(a===30) {
+            //         let b = 40;
+            //         console.log(b)
+            //     }
+            //     console.log(a)
+            //     console.log(b)
+            // }
+            
+
+            // demoScope();
+            
+        //  function show(){
+        //     console.log(a)
+        //     var a = 30;
+        //     console.log(a);
+        //  }
+        //  var a = 40
+        //  console.log(a,window.a,this.a);
+        //  show();
+            //object
+
+            // var user = {
+            //     name:"test",
+            //     age:20,
+            //     email:"test@gmail.com" 
+            // }
+
+            // var a = {}
+
+            // function User(name,age){
+            //     this.name = name;
+            //     this.age = age;
+            // }
+            // var u = new User("test",30);
+            // console.log(u.name,u.age);
+
+
+            // function Employee(name,id){
+            //     this.name=name;
+            //     this.id=id;
+            // }
+
+            // var e1 = new Employee("emp1",40)
+            // class Employee{
+            //     constructor(name,id){
+            //         this.name=name;
+            //         this.id=id;
+            //     }
+            // }
+            // var e1 = new Employee("emp1",101)
+
+            // console.log(e1);
+            //inheritance
+
+            // class Person{
+            //     constructor(name,age){
+            //         this.name=name;
+            //         this.age = age;
+            //     }
+            //     showPersonInfo(){
+            //         console.log(this.name,this.age)
+            //     }
+            // }
+
+            // class Employee extends Person{
+            //     constructor(name,age,id,department){
+            //         super(name,age)
+            //         this.id = id;
+            //         this.department = department;
+            //     }
+            //     showEmployeeInfo(){
+            //         console.log(this.department,this.id)
+            //     }
+            // }
+
+            // let emp1 = new Employee("emp1",30,101,"developer")
+            // console.log(emp1.showEmployeeInfo());
+            // console.log(emp1.showPersonInfo())
+
+            // console.log("first");
+
+            // setTimeout(function(){
+            //     console.log("second");
+            // },0)
+
+            // console.log("third");
+
+            // console.log("first");
+            // for(i=0;i<1000;i++){
+            //     console.log(i)
+            // }
+            // console.log("second");
+            // show();
+
+            // function show(){
+            //     console.log("hello i am from show");
+            // }
+
+        //    function getAllUsers(){
+        //     return new Promise(function(resolve,reject){
+        //         resolve({"name":"test",age:20})
+        //     })
+        //    }
+
+        //    getAllUsers().then(function(res){
+        //     console.log(res)
+          
+        //    }).catch(function(error){
+        //     console.log(error);
+        //    })
+        //    console.log("hello world");
+
+        //this
+
+        // var user = {
+        //     name:"test",
+        //     show:function show(){
+        //         console.log(this.name)
+        //     }
+        // }
+        // var name="test2";
+        // function show(){
+        //     console.log(this===window)
+        //     console.log(this.name,window.name)
+        // }
+
+        // show();
+
+
+
+
+
+        //user.show();
+
+        // call apply bind demo
+
+        let user = {
+            name:"test",
+            showName: function(){
+                console.log(this.name)
+            }
+        }
+
+        let user2 = {
+            name:"test2"
+        }
+
+        var newFn = user.showName.bind(user2)
+        newFn();
+
+       // user.showName();
+
+          
+
+
+        </script>
+    </body>
+</html>
+

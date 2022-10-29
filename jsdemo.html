@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS demo</title>
+    </head>
+    <body>
+        <h1 id="head1"></h1>
+        <input type="text"name="fname" value="" onchange="displayName()"/>
+        <script>
+            function displayName(){
+                debugger;
+                console.log(event);
+            }
+            document.getElementById("head1").innerHTML="hello head1"
+            document.getElementById("head1").style.color="red";
+            // var a = 30,b=20
+            // console.log(a+b)
+
+            // var a = 20;
+            // var age=30;
+            // var isVlalidUser = true;
+            // var $a =30 
+            // var _a=30
+            // var user_name="test"
+
+            var a = 30
+            var a = "hello i m here"
+            var a = true 
+           // string,number,boolean,object,undeifned,null
+
+            var name="test";
+            console.log(typeof name);
+            var isUserValid = true;
+            console.log(typeof isUserValid)
+            var ob = {
+                name:"test",
+                age:20
+            }
+            console.log(typeof ob)
+            var age;
+            console.log(typeof age)
+            var age = null
+            console.log(typeof age);
+                           // 0    1      2
+            var subjects = ['c','cpp','java']
+            console.log(subjects[2])
+
+
+            //if else if--else
+
+            var age =20
+            if(age>18){
+                console.log("user is valid");
+            }else{
+                console.log("user not valid");
+            }
+            var number = -5
+            if(number>0){
+                console.log("number is positive");
+
+            }else if(number<0){
+                console.log("number is negative");
+            }else {
+                console.log("number is zero")
+            }
+
+        </script>
+    </body>
+</html>

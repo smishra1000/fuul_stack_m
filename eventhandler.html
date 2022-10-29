@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS demo</title>
+    </head>
+    <body>
+        <div id="box1" style="background-color: red;width:125px;height:125px;">
+
+        </div>
+        <input type="text" value="" id="fname" onchange="search()">
+        <button onclick="changeMe()">change me</button>
+        <script>
+          function changeMe(){
+            document.getElementById("box1").style.backgroundColor="green"
+          }
+
+          function search(){
+            console.log(document.getElementById("fname").value)
+            console.log("search")
+          }
+
+          var usernames = ['test','test2','test3'] 
+          for(i=0;i<usernames.length;i++){
+            console.log(usernames[i].toUpperCase())
+          }
+
+          function getUser(){
+            return new Promise(function(resolve,reject){
+                reject("error from here")
+            })
+           
+          }
+          getUser().then(function(res){
+            console.log("user returned from function=",res)
+            console.log("hello after get user")
+          }).catch(function(err){
+            console.log("errr",err)
+          })
+          
+
+
+
+        </script>
+    </body>
+</html>
